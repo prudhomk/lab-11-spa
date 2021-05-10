@@ -5,6 +5,11 @@
 }
 
 main {
-  background: #FAF0EA;
+  background: url('./../galaxy.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
 

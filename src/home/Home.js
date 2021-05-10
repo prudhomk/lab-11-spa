@@ -7,9 +7,9 @@ export default class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <h2>Home Page</h2>
+        <h2>Only the Strong may Enter:</h2>
 
-        <Link to='/resources'>See the List</Link>
+        <Link to='/strongest'>Enter</Link>
       </div>
     );
   }

@@ -1,0 +1,15 @@
+.StrongDetail {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  margin: 50px;
+}
+
+.StrongDetail h2 {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.StrongDetail p {
+  padding: 10px;
+}
