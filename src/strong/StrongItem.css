@@ -5,7 +5,7 @@
   padding: 10px;
 
   display: grid;
-  grid-template-rows: 30px 120px 20px;
+  grid-template-rows: 30px 40px 120px 20px;
   grid-gap: 10px;
 
   justify-items: center;
@@ -14,8 +14,6 @@
   color: inherit;
   cursor: pointer;
 }
-
-
 
 .StrongItem h2 {
   margin: 0;
@@ -31,3 +29,4 @@
   margin: 0;
   font-size: .9rem;
 }
+

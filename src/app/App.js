@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import StrongPage from '../strong/StrongPage';
-
+import StrongDetail from '../detail/StrongDetail';
 import {
   BrowserRouter as Router,
   Route,
@@ -36,7 +36,7 @@ class App extends Component {
 
               <Route path="/strongest/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <StrongDetail {...routerProps}/>
                 )}
               />
 

@@ -1,3 +1,22 @@
 .Home {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  flex-direction: column;
+  background-image: url('./../galaxy.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.Home h2 {
+  font-size: 100px;
+  color: white;
+}
+
+.Home a {
+  font-size: 50px;
+  color: white;
 }
