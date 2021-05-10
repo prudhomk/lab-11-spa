@@ -2,6 +2,8 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import StrongPage from '../strong/StrongPage';
+
 import {
   BrowserRouter as Router,
   Route,
