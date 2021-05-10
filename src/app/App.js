@@ -30,7 +30,7 @@ class App extends Component {
 
               <Route path="/strongest" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <StrongPage {...routerProps}/>
                 )}
               />
 
