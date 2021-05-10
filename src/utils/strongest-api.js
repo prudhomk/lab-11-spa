@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'https://safe-journey-69447.herokuapp.com/api/strongest';
+const URL = '/api/strongest';
 
 export async function getStrongest() {
   const response = await request.get(URL);
