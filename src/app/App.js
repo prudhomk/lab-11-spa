@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import StrongPage from '../strong/StrongPage';
 import StrongDetail from '../detail/StrongDetail';
+
 import {
   BrowserRouter as Router,
   Route,

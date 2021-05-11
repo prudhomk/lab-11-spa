@@ -11,3 +11,8 @@ export async function getBeing(id) {
   const response = await request.get(`${URL}/${id}`);
   return response.body;
 }
+
+export async function addBeing(being) {
+  const response = await (await request.post(URL)).send(being);
+  return response.body;
+}
