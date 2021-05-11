@@ -49,7 +49,7 @@ export default class StrongForm extends Component {
 
   render() {
     const { name, type, image, description, power, isGood } = this.state;
-    const { being } = this.props;
+    
 
     return (
       <form className="StrongForm" onSubmit={this.handleSubmit}>
@@ -90,14 +90,14 @@ export default class StrongForm extends Component {
 
         <p>
           <label>
-            <span>Good or Bad</span>
+            <span>Good or Bad (Answer True or False)</span>
             <input name="isGood" required pattern="^(?:tru|fals)e$" placeholder="Are they good or bad?" value={isGood} onChange={this.handleChangeIsGood}/>
           </label>
         </p>
       
 
         <p>
-          <button>Add Cat</button>
+          <button>Add Challenger</button>
         </p>
 
       </form>
