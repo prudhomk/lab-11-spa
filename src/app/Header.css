@@ -1,9 +1,32 @@
 .Header {
   padding: 20px;
   border-bottom: 1px solid lightgray;
+  display: grid;
+  grid-template-columns: 50px 1fr 2fr;
+  grid-gap: 20px;
+  align-items: center;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
+.Header nav {
+  justify-self: end;
+}
+
+.Header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  border: 1px solid lightgray;
+  padding: 5px 10px;;
+  background: red;
+  color: white;
+  font-size: .85rem;
+  
+}
+
+.Header nav a:hover {
+  background: #65A7AB;
+}
+
+.Header nav a.active {
+  color:#1F4E5C;
+  background: Gold;
 }

@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import { getBeing } from '../utils/strongest-api';
+import { getBeing, deleteBeing } from '../utils/strongest-api';
 import './StrongDetail.css';
-
+import { Link } from 'react-router-dom';
 export default class StrongDetail extends Component {
   state = {
     being: null
@@ -18,6 +18,23 @@ export default class StrongDetail extends Component {
     }
   }
 
+  handleDelete = async () => {
+    const { being } = this.state;
+    const { history } = this.props;
+
+    const confirmation = `Do you wish to destroy ${being.name}?`;
+
+    if (!window.confirm(confirmation)) { return; }
+
+    try {
+      await deleteBeing(being.id);
+      history.push('/strongest');
+    }
+    catch (err) {
+      console.log(err.message);
+    }
+  }
+
   render() {
     const { being } = this.state;
 
@@ -29,9 +46,17 @@ export default class StrongDetail extends Component {
 
         <p>Name: {being.name}</p>
         <p>Type: {being.type}</p>
+        <img src={being.image} alt={being.name}></img>
         <p>Description: {being.description}</p>
         <p>Power Level: {being.power}</p>
         
+        <Link to={`/strongest/${being.id}/edit`}>
+          Edit Challenger Info
+        </Link>
+
+        <button className="delete" onClick={this.handleDelete}>
+          Destroy them!
+        </button>
       </div>
     );
   }

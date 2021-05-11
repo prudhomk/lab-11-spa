@@ -90,14 +90,14 @@ export default class StrongForm extends Component {
 
         <p>
           <label>
-            <span>Good or Bad</span>
-            <input name="isGood" required placeholder="Are they good or bad?" value={isGood} onChange={this.handleChangeIsGood}/>
+            <span>Good or Bad (Answer True or False)</span>
+            <input name="isGood" required pattern="^(?:tru|fals)e$" placeholder="Are they good or bad?" value={isGood} onChange={this.handleChangeIsGood}/>
           </label>
         </p>
       
 
         <p>
-          <button>Add Cat</button>
+          <button>{being ? 'Update' : 'Add'} Challenger</button>
         </p>
 
       </form>
