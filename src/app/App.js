@@ -5,6 +5,7 @@ import Home from '../home/Home';
 import StrongPage from '../strong/StrongPage';
 import StrongDetail from '../detail/StrongDetail';
 import AddBeingPage from '../add-being/AddBeingPage';
+import UpdateBeing from '../edit-being/UpdateBeing';
 import {
   BrowserRouter as Router,
   Route,
@@ -41,9 +42,15 @@ class App extends Component {
                 )}
               />  
 
-              <Route path="/strongest/:id"
+              <Route path="/strongest/:id" exact={true}
                 render={routerProps => (
                   <StrongDetail {...routerProps}/>
+                )}
+              />
+
+              <Route path="/strongest/:id/edit" exact={true}
+                render={routerProps => (
+                  <UpdateBeing {...routerProps}/>
                 )}
               />
 

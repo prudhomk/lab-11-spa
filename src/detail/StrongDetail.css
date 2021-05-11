@@ -10,8 +10,18 @@
   font-size: 20px;
 }
 
+.StrongDetail image {
+  height: 10px;
+  width: 10px;
+}
+
 .StrongDetail p {
   padding: 10px;
+}
+
+.StrongDetail a {
+  font-size: .9rem;
+  margin-right: 10px;
 }
 
 .StrongDetail button.delete {
@@ -21,4 +31,6 @@
   color: blue;
   font-size: .9rem;
   cursor: pointer;
+  font-size: 20px;
+
 }

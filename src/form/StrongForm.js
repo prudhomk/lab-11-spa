@@ -49,7 +49,7 @@ export default class StrongForm extends Component {
 
   render() {
     const { name, type, image, description, power, isGood } = this.state;
-    
+    const { being } = this.props;
 
     return (
       <form className="StrongForm" onSubmit={this.handleSubmit}>
@@ -97,7 +97,7 @@ export default class StrongForm extends Component {
       
 
         <p>
-          <button>Add Challenger</button>
+          <button>{being ? 'Update' : 'Add'} Challenger</button>
         </p>
 
       </form>

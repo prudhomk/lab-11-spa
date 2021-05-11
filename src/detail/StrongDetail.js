@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { getBeing, deleteBeing } from '../utils/strongest-api';
 import './StrongDetail.css';
-
+import { Link } from 'react-router-dom';
 export default class StrongDetail extends Component {
   state = {
     being: null
@@ -46,9 +46,14 @@ export default class StrongDetail extends Component {
 
         <p>Name: {being.name}</p>
         <p>Type: {being.type}</p>
+        <img src={being.image} alt={being.name}></img>
         <p>Description: {being.description}</p>
         <p>Power Level: {being.power}</p>
         
+        <Link to={`/strongest/${being.id}/edit`}>
+          Edit Challenger Info
+        </Link>
+
         <button className="delete" onClick={this.handleDelete}>
           Destroy them!
         </button>

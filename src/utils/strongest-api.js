@@ -21,3 +21,8 @@ export async function deleteBeing(id) {
   const response = await request.delete(`${URL}/${id}`);
   return response.body;
 }
+
+export async function updateBeing(being) {
+  const response = await request.put(`${URL}/${being.id}`).send(being);
+  return response.body;
+}
